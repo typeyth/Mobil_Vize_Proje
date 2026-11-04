@@ -116,6 +116,4 @@ Mobil_Vize_Proje/
 │       │   └── person_form_screen.dart    Ekle / düzenle formu
 │       └── widgets/person_avatar.dart     Dairesel profil fotoğrafı
 ├── README.md
-├── SAVUNMA_REHBERI.md
-└── SUNUM_KURULUM.md          Sıfırdan kurulum rehberi
 ```
