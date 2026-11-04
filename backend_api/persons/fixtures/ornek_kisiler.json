@@ -1,0 +1,27 @@
+[
+  {"model": "persons.person", "pk": 1, "fields": {
+    "fullName": "Ahmet Yılmaz", "department": "Yazılım Geliştirme",
+    "photoUrl": "https://randomuser.me/api/portraits/men/32.jpg",
+    "birthPlace": "Adana", "birthDate": "1994-04-12",
+    "email": "ahmet.yilmaz@sirket.com", "phone": "+905550123456"}},
+  {"model": "persons.person", "pk": 2, "fields": {
+    "fullName": "Ayşe Kaya", "department": "İnsan Kaynakları",
+    "photoUrl": "https://randomuser.me/api/portraits/women/44.jpg",
+    "birthPlace": "Gaziantep", "birthDate": "1991-09-23",
+    "email": "ayse.kaya@sirket.com", "phone": "+905551234567"}},
+  {"model": "persons.person", "pk": 3, "fields": {
+    "fullName": "Mehmet Demir", "department": "Bilgi Teknolojileri",
+    "photoUrl": "https://randomuser.me/api/portraits/men/65.jpg",
+    "birthPlace": "İzmir", "birthDate": "1988-01-30",
+    "email": "mehmet.demir@sirket.com", "phone": "+905552345678"}},
+  {"model": "persons.person", "pk": 4, "fields": {
+    "fullName": "Zeynep Çelik", "department": "Muhasebe",
+    "photoUrl": "https://randomuser.me/api/portraits/women/68.jpg",
+    "birthPlace": "Şanlıurfa", "birthDate": "1996-06-15",
+    "email": "zeynep.celik@sirket.com", "phone": "+905553456789"}},
+  {"model": "persons.person", "pk": 5, "fields": {
+    "fullName": "Öğrenci Örnek", "department": "Pazarlama",
+    "photoUrl": "",
+    "birthPlace": "Ankara", "birthDate": "2000-12-01",
+    "email": "ornek@sirket.com", "phone": "+905554567890"}}
+]
