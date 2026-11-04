@@ -27,3 +27,6 @@
 *.iws
 Thumbs.db
 .DS_Store
+
+# Özel Rehberler (GitHub'a gitmez)
+rehberler/
