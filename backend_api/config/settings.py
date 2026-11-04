@@ -25,6 +25,9 @@ DEBUG = True
 # istekleri "400 Bad Request" diye reddeder.
 ALLOWED_HOSTS = ['*']
 
+# Web (Chrome) üzerinden gelen isteklere izin ver
+CORS_ALLOW_ALL_ORIGINS = True
+
 # Kurulu uygulamalar listesi. Django yalnızca buradakileri tanır.
 INSTALLED_APPS = [
     'django.contrib.admin',        # hazır yönetim paneli (/admin)
@@ -34,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',              # BİZİM DEĞİŞİKLİK 2: REST API kütüphanesi (DRF)
+    'corsheaders',                 # Web (Chrome) isteklerine izin vermek için CORS
     'persons',                     # BİZİM DEĞİŞİKLİK 3: kendi yazdığımız uygulama
 ]
 
 # Ara katmanlar: her isteğin başında/sonunda çalışan güvenlik vb. küçük parçalar.
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # CORS middleware en üstte olmalı
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

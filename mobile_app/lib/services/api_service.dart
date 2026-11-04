@@ -3,6 +3,7 @@
 // Adres değişirse sadece bu dosyaya dokunuruz.
 
 import 'dart:convert'; // jsonEncode / jsonDecode / utf8
+import 'package:flutter/foundation.dart' show kIsWeb; // Web (Chrome) mu kontrolü
 import 'package:http/http.dart' as http; // HTTP istekleri için resmi paket
 import '../models/person.dart';
 
@@ -13,11 +14,12 @@ import '../models/person.dart';
 //  - dart:io HttpClient: yerleşik ama çok düşük seviyeli, her şeyi elle yapmak gerekir.
 
 class ApiService {
-  // ADRES: Android emülatöründe "localhost" TELEFONUN KENDİSİDİR, bilgisayarın değil!
-  // Emülatörün bilgisayara açılan özel kapısı: 10.0.2.2
-  //  - Gerçek telefon kullanıyorsan: bilgisayarın IP'sini yaz, örn. 'http://192.168.1.20:8000/api/persons'
-  //  - iOS simülatör: 'http://127.0.0.1:8000/api/persons'
-  static const String baseUrl = 'http://10.0.2.2:8000/api/persons';
+  // ADRES:
+  // - Chrome (Web) üzerinde çalışıyorsa: 'http://127.0.0.1:8000/api/persons'
+  // - Android Emülatör üzerinde çalışıyorsa: 'http://10.0.2.2:8000/api/persons'
+  static String get baseUrl => kIsWeb
+      ? 'http://127.0.0.1:8000/api/persons'
+      : 'http://10.0.2.2:8000/api/persons';
 
   // Sunucuya "gövdem JSON ve UTF-8" diyen başlık (POST ve PUT'ta lazım).
   static const Map<String, String> _headers = {
